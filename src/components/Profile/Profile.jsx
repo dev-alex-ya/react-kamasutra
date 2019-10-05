@@ -4,7 +4,7 @@ import classes from './Profile.module.css';
 
 const Profile = () => {
     return (
-        <div className={classes.content}>
+        <div>
             <div>
                 <img src='https://cdn.sandals.com/beaches/v12/images/general/destinations/home/beach.jpg'></img>
             </div>
