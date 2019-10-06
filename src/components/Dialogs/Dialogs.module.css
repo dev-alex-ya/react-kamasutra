@@ -1,3 +1,33 @@
 .dialogs {
-    background-color: lightskyblue;
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+}
+
+.dialogsItems {
+    border: #e1e1e1 solid 1px;
+}
+
+.dialog {
+    border-bottom: #e1e1e1 solid 1px;
+    padding: 20px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: smaller;
+    border: #e1e1e1 solid 1px;
+    border-left: 0;
+    padding: 20px;
+}
+
+.message {
+    display: inline-block;
+    background-color: #efefef;
+    color: #7d6667;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px;
+
 }

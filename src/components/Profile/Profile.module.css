@@ -1,3 +1,15 @@
-.description{
-
+.info {
+    display: flex;
+    margin-bottom: 40px;
 }
+
+.banner {
+    height: 250px;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+.description {
+    font-size: 20px;
+}
+
