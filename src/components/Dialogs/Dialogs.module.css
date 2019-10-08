@@ -7,11 +7,6 @@
     border: #e1e1e1 solid 1px;
 }
 
-.dialog {
-    border-bottom: #e1e1e1 solid 1px;
-    padding: 20px;
-}
-
 .messages {
     display: flex;
     flex-direction: column;
@@ -29,5 +24,4 @@
     padding: 15px;
     margin: 5px;
     border-radius: 10px;
-
 }
