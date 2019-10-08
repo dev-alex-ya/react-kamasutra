@@ -1,12 +1,14 @@
 import React from 'react';
+import DialogItem from './DialogItem/DialogItem';
+import Message from './Message/Message';
 import classes from './Dialogs.module.css';
-import {NavLink} from "react-router-dom";
 
 let messages = [
     {message: "Hi"},
     {message: "Hey we are going to the cinema."},
     {message: "are you coming with us"}
 ];
+
 let dialogs = [
     {id: '1', name: "Стивен Роджерс"},
     {id: '2', name: "Энтони Старк"},
@@ -17,39 +19,18 @@ let dialogs = [
     {id: '7', name: "Грут"}
 ];
 
-const DialogItem = (props) => {
-    return (
-        <div className={classes.dialog}>
-            <NavLink to={`/dialogs/${props.id}`}>{props.name}</NavLink>
-        </div>
-    );
-};
+let dialogsElements = dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />);
 
-const Message = (props) => {
-    return(
-        <div className={classes.message}>
-            {props.message}
-        </div>
-    );
-};
-
+let messagesElements = messages.map( msg => <Message message={msg.message} /> );
 
 const Dialogs = (props) => {
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>
-                <DialogItem name={dialogs[0].name} id={dialogs[0].id} />
-                <DialogItem name={dialogs[1].name} id={dialogs[1].id}/>
-                <DialogItem name={dialogs[2].name} id={dialogs[2].id}/>
-                <DialogItem name={dialogs[3].name} id={dialogs[3].id}/>
-                <DialogItem name={dialogs[4].name} id={dialogs[4].id}/>
-                <DialogItem name={dialogs[5].name} id={dialogs[5].id}/>
-                <DialogItem name={dialogs[6].name} id={dialogs[6].id}/>
+                {dialogsElements}
             </div>
             <div className={classes.messages}>
-                <Message message={messages[0].message}/>
-                <Message message={messages[1].message}/>
-                <Message message={messages[2].message}/>
+                {messagesElements}
             </div>
         </div>
     );
