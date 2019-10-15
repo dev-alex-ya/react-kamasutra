@@ -1,0 +1,17 @@
+.friend {
+    /*border: red 1px dashed;*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo {
+    width: 60px;
+    border-radius: 50%;
+    /*border: gold 1px solid;*/
+}
+
+.name {
+
+}

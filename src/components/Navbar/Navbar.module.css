@@ -1,8 +1,12 @@
-.nav {
+.sidebar{
     grid-area: n;
     background-color: #e44d3a;
     color: #ffffff;
     padding: 10px;
+    /*border: black 2px solid;*/
+}
+.nav {
+
 }
 
 .item a {
@@ -12,4 +16,9 @@
 
 .item a.active {
     color: gold;
+}
+
+.friends {
+    display: flex;
+    margin-top: 20px;
 }

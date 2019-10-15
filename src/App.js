@@ -15,7 +15,7 @@ const App = (props) => {
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
-                <Nav/>
+                <Nav friends={props.state.sidebar.friends}/>
                 <div className='app-wrapper-content'>
 
                     {/*state={state.posts} dialogs={state.dialogs} messages={state.messages}*/}
