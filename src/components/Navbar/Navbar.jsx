@@ -27,9 +27,7 @@ debugger;
             <section>
                 <h2>Friends</h2>
                 <div className={classes.friends}>
-                    <Friend name={props.friends[0].name} photo={props.friends[0].photo} />
-                    <Friend name={props.friends[1].name} photo={props.friends[1].photo} />
-                    <Friend name={props.friends[2].name} photo={props.friends[2].photo} />
+                    {props.friends.map((friend) => <Friend name={friend.name} photo={friend.photo} />)}
                 </div>
             </section>
         </div>
