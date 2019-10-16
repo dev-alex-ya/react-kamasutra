@@ -1,9 +1,10 @@
 let state = {
     messagesPage: {
         messages: [
-            {message: "Hi"},
-            {message: "Hey we are going to the cinema."},
-            {message: "are you coming with us"}
+            {message: "Hi", messageOwner: "notMe"},
+            {message: "Hey we are going to the cinema.", messageOwner: "notMe"},
+            {message: "are you coming with us?", messageOwner: "notMe"},
+            {message: "sorry man, I am busy today", messageOwner: "me"}
         ],
         dialogs: [
             {id: '1', name: "Стивен Роджерс"},

@@ -10,11 +10,19 @@
 .messages {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+}
+
+.messagesItems {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
     font-size: smaller;
     border: #e1e1e1 solid 1px;
     border-left: 0;
     padding: 20px;
+    background-color: #f5f5f5;
 }
 
 .message {
@@ -24,4 +32,7 @@
     padding: 15px;
     margin: 5px;
     border-radius: 10px;
+}
+.message.me {
+    background-color:  #e44d3a
 }
