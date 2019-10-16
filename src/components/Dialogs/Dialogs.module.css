@@ -25,14 +25,3 @@
     background-color: #f5f5f5;
 }
 
-.message {
-    display: inline-block;
-    background-color: #efefef;
-    color: #7d6667;
-    padding: 15px;
-    margin: 5px;
-    border-radius: 10px;
-}
-.message.me {
-    background-color:  #e44d3a
-}

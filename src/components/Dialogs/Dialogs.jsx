@@ -14,7 +14,7 @@ const Dialogs = (props) => {
 
             <section className={classes.messages}>
                 <div className={classes.messagesItems}>
-                    {props.messages.map(msg => <Message message={`${msg.message} ${msg.messageOwner}`} /> )}
+                    {props.messages.map(msg => <Message message={msg.message} messageOwner={msg.messageOwner} /> )}
                 </div>
                 <NewMessage/>
             </section>

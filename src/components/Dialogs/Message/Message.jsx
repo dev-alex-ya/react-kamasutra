@@ -1,8 +1,9 @@
 import React from "react";
-import classes from "../Dialogs.module.css";
+import classes from "./Message.module.css";
 
 const Message = (props) => {
-    return <div className={classes.message}>{props.message}</div>
+    let ownerClass  = props.messageOwner === 'me' ? classes.me : classes.notMe;
+    return <div className={classes.message + ' ' + ownerClass }>{props.message}</div>
 };
 
 export default Message;
