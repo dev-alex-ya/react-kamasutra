@@ -7,7 +7,8 @@
 }
 
 .photo {
-    width: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     /*border: gold 1px solid;*/
 }
