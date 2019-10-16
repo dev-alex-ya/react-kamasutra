@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Friend.module.css';
 
 const Friend = (props) => {
-    debugger;
+
     return (
         <div className={classes.friend}>
             <img className={classes.photo} src={props.photo}></img>
