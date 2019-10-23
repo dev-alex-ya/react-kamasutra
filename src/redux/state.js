@@ -1,5 +1,5 @@
 let rerenderEntireTree = () => {
-    console.log('State was changed. Rerender...');
+        console.log('State was changed. Rerender...');
 };
 
 let state = {
