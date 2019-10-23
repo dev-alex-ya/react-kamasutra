@@ -3,19 +3,20 @@ import classes from './MyPosts.module.css';
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
+    // debugger;
     let posts = props.posts.map(post => <Post message={post.message} like={post.like} />);
     let newPostElement = React.createRef();//создаем ссылку
-    console.log(props.newPost);
+    console.log(props.updateNewPostText);
     let addPost = () => {
         let text = newPostElement.current.value;
         props.addPost(text);
         newPostElement.current.value = "";
     };
     let onPostChange = () => {
-        debugger;
+        // debugger;
 
         let currentText = newPostElement.current.value;
-        props.newPost(currentText);
+        props.updateNewPostText(currentText);
         newPostElement.current.value = props.newPost;
     };
 
