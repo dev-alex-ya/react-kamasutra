@@ -7,19 +7,16 @@ import {store} from "./redux/state";
 import {BrowserRouter} from "react-router-dom";
 
 let rerenderEntireTree = (state) => {
-    debugger;
+    // debugger;
     ReactDOM.render(
         <BrowserRouter>
-            <App
-                store={ store._state }
-                addPost={ store.addPost.bind(store) }
-                updateNewPostText={ store.updateNewPostText.bind(store) }
+            <App store={ store._state } dispatch={ store.dispatch.bind(store) }
             />
         </BrowserRouter>, document.getElementById('root')
     );
 };
 
-debugger;
+// debugger;
 store.subscribe(rerenderEntireTree);
 rerenderEntireTree(store.getState());
 

@@ -9,12 +9,12 @@ const Dialogs = (props) => {
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>
-                {props.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />)}
+                {props.messagesPage.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />)}
             </div>
 
             <section className={classes.messages}>
                 <div className={classes.messagesItems}>
-                    {props.messages.map(msg => <Message message={msg.message} messageOwner={msg.messageOwner} /> )}
+                    {props.messagesPage.messages.map(msg => <Message message={msg.message} messageOwner={msg.messageOwner} /> )}
                 </div>
                 <NewMessage/>
             </section>

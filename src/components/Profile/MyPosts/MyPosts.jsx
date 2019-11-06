@@ -7,16 +7,16 @@ const MyPosts = (props) => {
     let posts = props.posts.map(post => <Post message={post.message} like={post.like} />);
     let newPostElement = React.createRef();//создаем ссылку
     console.log(props.updateNewPostText);
-    let addPost = () => {
-        let text = newPostElement.current.value;
-        props.addPost(text);
-        newPostElement.current.value = "";
-    };
-    let onPostChange = () => {
-        debugger;
 
-        let currentText = newPostElement.current.value;
-        props.updateNewPostText(currentText);
+    let addPost = () => {
+        props.dispatch({type: 'ADD-POST'});
+    };
+
+    let onPostChange = () => {
+        // debugger;
+
+        let text = newPostElement.current.value;
+        props.dispatch({type: 'UPDATE-NEW-POST', newText: text});
         newPostElement.current.value = props.newPostText;
     };
 
