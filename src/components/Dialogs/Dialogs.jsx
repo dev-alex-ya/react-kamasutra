@@ -16,7 +16,7 @@ const Dialogs = (props) => {
                 <div className={classes.messagesItems}>
                     {props.messagesPage.messages.map(msg => <Message message={msg.message} messageOwner={msg.messageOwner} /> )}
                 </div>
-                <NewMessage/>
+                <NewMessage newMsgText={props.messagesPage.newMsgText} dispatch={props.dispatch}/>
             </section>
         </div>
     );

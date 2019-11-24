@@ -1,6 +1,6 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST = 'UPDATE-NEW-POST';
-
+const UPDATE_NEW_MSG = 'UPDATE-NEW-MSG';
 export let store = {
     _state: {
         messagesPage: {
@@ -18,7 +18,8 @@ export let store = {
                 {id: '5', name: "Тор"},
                 {id: '6', name: "Доктор Стивен Стрэндж"},
                 {id: '7', name: "Грут"}
-            ]
+            ],
+            newMsgText: 'ukrsalo1234'
         },
         profilePage: {
             posts: [
@@ -63,6 +64,10 @@ export let store = {
             this._state.profilePage.newPostText = action.newText  ;
             this._callSubscriber(this._state);
         }
+        else if(action.type === UPDATE_NEW_MSG) {
+            this._state.messagesPage.newMsgText = action.newText  ;
+            this._callSubscriber(this._state);
+        }
     }
     
 };
@@ -73,6 +78,10 @@ export const addPostActionCreator = () => {
 };
 export const updateNewPostTextActionCreator = (text) => {
     return ({type: UPDATE_NEW_POST, newText: text});
+};
+
+export const updateNewMsgTextActionCreator = (text) => {
+    return ({type: UPDATE_NEW_MSG, newText: text});
 };
 
 // export default store;
