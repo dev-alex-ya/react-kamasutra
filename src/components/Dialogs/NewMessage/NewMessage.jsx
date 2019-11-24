@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './NewMessage.module.css';
-import {updateNewMsgTextActionCreator} from "../../../redux/state";
+import {updateNewMsgTextActionCreator, addMsgActionCreator} from "../../../redux/state";
 
 const NewMessage = (props) => {
     let newMsgElement = React.createRef();
-    debugger;
+    // debugger;
     const onMsgChange = () => {
         let text = newMsgElement.current.value;
         let action = updateNewMsgTextActionCreator(text);
@@ -12,10 +12,15 @@ const NewMessage = (props) => {
         newMsgElement.current.value = props.newMsgText;
     };
 
+    const addMsg= () => {
+        let action = addMsgActionCreator();
+        props.dispatch(action);
+    };
+
     return (
         <div className={classes.newMessage}>
             <textarea className={classes.text} onChange={onMsgChange} ref={newMsgElement} value={props.newMsgText}></textarea>
-            <button className={classes.btnSend}>Send</button>
+            <button className={classes.btnSend} onClick={addMsg}>Send</button>
         </div>
     );
 };

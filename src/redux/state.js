@@ -1,6 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST = 'UPDATE-NEW-POST';
 const UPDATE_NEW_MSG = 'UPDATE-NEW-MSG';
+const ADD_MSG = 'ADD-MSG';
 export let store = {
     _state: {
         messagesPage: {
@@ -68,6 +69,16 @@ export let store = {
             this._state.messagesPage.newMsgText = action.newText  ;
             this._callSubscriber(this._state);
         }
+        else if(action.type === ADD_MSG) {
+            let newMsg = {
+                id: 5,
+                message: this._state.messagesPage.newMsgText,
+                messageOwner: "me"
+            };
+            this._state.messagesPage.messages.push(newMsg);
+            this._state.messagesPage.newMsgText = '';
+            this._callSubscriber();
+        }
     }
     
 };
@@ -83,6 +94,8 @@ export const updateNewPostTextActionCreator = (text) => {
 export const updateNewMsgTextActionCreator = (text) => {
     return ({type: UPDATE_NEW_MSG, newText: text});
 };
-
+export const addMsgActionCreator = () => {
+    return ({type: ADD_MSG});
+};
 // export default store;
 window.store = store;
